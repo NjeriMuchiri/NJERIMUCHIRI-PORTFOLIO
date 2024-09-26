@@ -1,10 +1,16 @@
+import { BrowserRouter } from "react-router-dom";
+import {About, Contact, Experience, Feedback, Hero, Navbar, Tech, Works, StarsCanvas} from './components';
+
+
 const App = () =>{
   
 
   return (
-    <div>
-      NJERI MUCHIRI PORTFOLIO
+    <BrowserRouter>
+    <div className="relative z-0 bg-primary">
     </div>
+    </BrowserRouter>
+    
   )
 }
 
