@@ -2,7 +2,8 @@ import React, { useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {styles} from '../Styles';
 import { navLinks } from '../constants';
-import {logo, menu, close} from '../assets';
+import {menu, close} from '../assets';
+import njerina from '../assets/njerina.png';
 
 
 const Navbar = () => {
@@ -15,7 +16,8 @@ const Navbar = () => {
           window.scrollTo(0, 0);
         }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain"/>
+          <img src={njerina} alt="logo" className="w-6 h-6 object-contain"/>
+          <p className='text-white text-[18px] font bold cursor-pointer'>NJERI MUCHIRI<span className='sm:block hidden'> | SOFTWARE DEVELOPER</span></p>
         </Link>
        </div>
     </nav>
