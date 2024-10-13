@@ -19,12 +19,13 @@ const Navbar = () => {
         }}
         >
           <img src={NJERI} alt="logo" className="w-13 h-10 object-contain"/>
-          <p className='text-white text-[18px] font bold cursor-pointer'>NJERI MUCHIRI<span className='sm:block hidden'> | SOFTWARE DEVELOPER</span></p>
+          <p className='text-white text-[18px] font-bold cursor-pointer flex'>NJERI MUCHIRI &nbsp;
+          <span className='sm:block hidden'> | SOFTWARE DEVELOPER</span></p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
             {navLinks.map((link) => (
               <li key={link.id} className={`${ active === link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => SetActive(link.title)}>
+              onClick={() => setActive(link.title)}>
                  <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
@@ -39,8 +40,10 @@ const Navbar = () => {
            <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
            <ul className='list-none flex justify-end items-start flex-col gap-4'>
             {navLinks.map((link) => (
-              <li key={link.id} className={`${ active === link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => SetActive(link.title)}>
+              <li key={link.id} className={`${ active === link.title ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer text-[16px]`}
+              onClick={() => {setToggle(!toggle);
+                             setActive(link.title);
+              }}>
                  <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
